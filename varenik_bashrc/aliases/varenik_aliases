@@ -1,0 +1,43 @@
+#======================================================
+#    OWN ALIASES 
+#      - this file is inceluded into ~/.bashrc
+#      - version: 1
+#======================================================
+
+
+#==================== MANAGE ==================================================================================================
+# UDPATE 
+varenik_update="echo 'this function will be created soon'"
+
+# DELETE
+varenik_delete="echo 'this function will be created soon'"
+
+
+#==================== TMUX ALIASES =================================================================================================
+# SEE ALL SESSION -- tls
+alias tls="echo all_sessions_of_tmux && tmux ls"
+
+# ATTACHE SESSION -- tas
+alias tas="echo attache_session  session_name && tmux attach -t $1"
+
+# KILL ALL SESSION -- tks
+alias tks="echo kill_all_session && tls && pkill -f tmux"
+
+#==================== VIRTUAL ENVIRONMANT =======================================================================================
+# CREATE VIRTUAL ENVIRONMENT  -- cv
+alias cv="echo please_wait_creating_venv && virtualenv --python=python3 venv"
+
+# ACTIVATE VIRTUAL ENVIRONMENT -- av
+alias av="echo please_wait_activating_venv && source ./venv/bin/activate"
+
+# CREATE ANA ACTIVATE VIRTUAL ENVIRONMENT -- cav
+alias cav="echo please_wait_creating_venv_and_activating && cv && source ./venv/bin/activate"
+
+#=============== MONITORING TMUX ===============================================================================================
+alias monitoring="~/.varenik_bashrc/tmux_windows/monitoring/monitoring.sh"
+
+#=============== KVM TMUX ===============================================================================================
+alias tmuxkvm="~/.varenik_bashrc/tmux_windows/kvm/tmux_kvm.sh"
+
+# for test
+alias e="echo $1"

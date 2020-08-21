@@ -1,0 +1,1 @@
+echo "WATCH THE STORAGE POOL"
