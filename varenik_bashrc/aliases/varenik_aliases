@@ -34,10 +34,10 @@ alias av="echo please_wait_activating_venv && source ./venv/bin/activate"
 alias cav="echo please_wait_creating_venv_and_activating && cv && source ./venv/bin/activate"
 
 #=============== MONITORING TMUX ===============================================================================================
-alias monitoring="~/.varenik_bashrc/tmux_windows/monitoring/monitoring.sh"
+alias tmonitor="~/.varenik_bashrc/tmux_windows/monitoring/monitoring.sh"
 
 #=============== KVM TMUX ===============================================================================================
-alias tmuxkvm="~/.varenik_bashrc/tmux_windows/kvm/tmux_kvm.sh"
+alias tkvm="~/.varenik_bashrc/tmux_windows/kvm/tmux_kvm.sh"
 
 # for test
 alias e="echo $1"

@@ -4,9 +4,6 @@
 SESSION_NAME='tmux_kvm'
 PATH_TO_HELPER="~/.varenik_bashrc/tmux_windows/kvm/helper/"
 
-echo $PATH_TO_HELPER
-echo $PATH_TO_HELPER2
-
 
 # check that tmux is installed
 if ! command -v tmux > /dev/null; then
@@ -30,7 +27,6 @@ else
       tmux split-window -v -t $SESSION_NAME:0.1 
       tmux split-window -v -t $SESSION_NAME:0.2 
       tmux split-window -v -t $SESSION_NAME:0.3
-      tmux split-window -v -t $SESSION_NAME:0.4
 
 
 
@@ -38,10 +34,9 @@ else
       # tmux send-keys -t $SESSION_NAME:0.0 '~/.varenik_bash/tmux-monitoring/helper/htop.sh' C-m
 
       tmux send-keys -t $SESSION_NAME:0.0 $PATH_TO_HELPER'watch_storage_pool.sh' C-m
-      tmux send-keys -t $SESSION_NAME:0.1 '$PATH_TO_HELPER watch_storage_pool.sh' C-m
-      tmux send-keys -t $SESSION_NAME:0.2 'echo "DUPA "' C-m
+      tmux send-keys -t $SESSION_NAME:0.1 'watch virsh list --all' C-m
+      tmux send-keys -t $SESSION_NAME:0.2 'watch virsh pool-list' C-m
+      tmux send-keys -t $SESSION_NAME:0.3 'watch virsh net-list' C-m
 
-      # run monitoring network adapters
-      # tmux send-keys -t $SESSION_NAME:0.2 '~/.varenik_bash/tmux-monitoring/scripts/bomn.sh' C-m
-            
+      exec tmux attach -t $SESSION_NAME
 fi
